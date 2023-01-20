@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61dae829-4a08-4342-84c9-0a8bb9c52705" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql_example.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../postgres_example/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../postgres_example/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../postgres_example/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../postgres_example/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../postgres_example/postgres_example.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rusqlite_example/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rusqlite_example/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rusqlite_example/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rusqlite_example/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rusqlite_example/cats.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rusqlite_example/cats2.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rusqlite_example/rusqlite_example.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rusqlite_example/src/cats.db" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="25h6vm40" />
+  </component>
+  <component name="ProjectId" id="2Kaba9CS5dFBabP8KKYKbF5QaAV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="run --package mysql_example --bin mysql_example" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61dae829-4a08-4342-84c9-0a8bb9c52705" name="Changes" comment="" />
+      <created>1674215703467</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674215703467</updated>
+    </task>
+    <servers />
+  </component>
+</project>
