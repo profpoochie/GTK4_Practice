@@ -26,7 +26,7 @@ fn build_ui(application: &Application) {
     let button: Button = builder.object("button").expect("Couldn't get button");
 
     // Define text box or Entry
-    let entry: Entry = builder.object("entry").expect("Couldn't get button");
+    let entry: Entry = builder.object("entry").expect("Couldn't get Entry");
 
     // Action of the button
     button.connect_clicked(clone!(@weak entry => move |_btn| {
