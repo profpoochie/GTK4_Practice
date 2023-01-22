@@ -34,8 +34,6 @@ fn build_ui(application: &Application) {
         term_command(input_string);
     }));
 
-
-
     window.show();
 }
 
