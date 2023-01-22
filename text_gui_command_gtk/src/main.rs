@@ -14,34 +14,24 @@ fn main() {
     application.run();
 }
 fn build_ui(application: &Application) {
+    // Define the GUI xml
     let ui_src = include_str!("text_gui.ui");
     let builder = Builder::from_string(ui_src);
 
+    // Define window
     let window: ApplicationWindow = builder.object("window").expect("Couldn't get window");
     window.set_application(Some(application));
+
+    // Define button
     let button: Button = builder.object("button").expect("Couldn't get button");
 
+    // Define text box or Entry
     let entry: Entry = builder.object("entry").expect("Couldn't get button");
 
-
-
-    /*button.connect_clicked(move |_| {
-        term_command();
-    });*/
-
+    // Action of the button
     button.connect_clicked(clone!(@weak entry => move |_btn| {
-        let input_string = entry.text();
-        let input_vec: Vec<&str> = input_string.split(" ").collect();
-        let command = input_vec[0];
-        let args = &input_vec[1..];
-        let output = Command::new(command)
-                    .args(args)
-                    .output()
-                    .expect("Failed to run command");
-
-        let stdout = String::from_utf8_lossy(&output.stdout);
-        println!("{}", stdout);
-        //clipboard.set_text(&text);
+        let input_string = entry.text().to_string();
+        term_command(input_string);
     }));
 
 
@@ -49,11 +39,15 @@ fn build_ui(application: &Application) {
     window.show();
 }
 
-fn term_command() {
-    let output = Command::new("ls")
-        .arg("-l")
+// Terminal command
+fn term_command(input_string:String) {
+    let input_vec: Vec<&str> = input_string.split(" ").collect();
+    let command = input_vec[0];
+    let args = &input_vec[1..];
+    let output = Command::new(command)
+        .args(args)
         .output()
-        .expect("failed to execute process");
+        .expect("Failed to run command");
 
     let stdout = String::from_utf8_lossy(&output.stdout);
     println!("{}", stdout);
