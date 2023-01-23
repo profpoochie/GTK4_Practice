@@ -2,7 +2,7 @@
 use glib::clone;
 use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow, Builder, Button, Entry};
-use gtk::{gdk, glib};
+use gtk:: glib;
 use std::process::Command;
 
 fn main() {
