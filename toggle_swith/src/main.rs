@@ -1,7 +1,7 @@
-use glib::clone;
+//use glib::clone;
 use gtk::prelude::*;
-use gtk::{Application, ApplicationWindow, Builder, Button, Entry, Switch, Label};
-use gtk:: glib;
+use gtk::{Application, ApplicationWindow, Builder, Switch, Label};
+//use gtk:: glib;
 //use std::process::Command;
 
 
@@ -27,12 +27,14 @@ fn build_ui(application: &Application) {
 
     let switch: Switch = builder.object("switch").expect("Couldn't get checkbutton");
     let label_switch: Label = builder.object("label_switch").expect("Couldn't get label");
-    
-    switch.connect_toggled(move |switch| {
+
+    // Toggling the switch
+
+    switch.connect_state_notify(move |switch|{
         if switch.is_active() {
-            label_switch.set_text("Button is now active.");
+            label_switch.set_text("Switch is now ON.");
         } else {
-            label_switch.set_text("Button is now inactive.");
+            label_switch.set_text("Switch is now OFF.");
         }
     });
 
