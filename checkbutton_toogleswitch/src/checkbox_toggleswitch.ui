@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+    <!-- interface-name checkbox_toggleswitch.ui -->
+    <requires lib="gtk" version="4.6"/>
+    <object class="GtkApplicationWindow" id="window">
+        <property name="default-height">100</property>
+        <property name="default-width">400</property>
+        <property name="halign">baseline</property>
+        <property name="title">Checkbox and Toogle Switch</property>
+        <child>
+            <object class="GtkBox" id="box">
+                <property name="orientation">vertical</property>
+                <child>
+                    <object class="GtkCheckButton" id="checkbutton">
+                        <property name="halign">start</property>
+                        <property name="label">Click to check</property>
+                        <property name="margin-bottom">10</property>
+                        <property name="margin-top">10</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkLabel" id="label_checkbutton">
+                        <property name="halign">start</property>
+                        <property name="label">Checkbutton state.</property>
+                        <property name="margin-bottom">10</property>
+                        <property name="margin-top">10</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkSwitch" id="switch">
+                        <property name="halign">start</property>
+                        <property name="margin-bottom">10</property>
+                        <property name="margin-top">10</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkLabel" id="label_switch">
+                        <property name="halign">start</property>
+                        <property name="label">Toogle Switch State</property>
+                        <property name="margin-bottom">10</property>
+                        <property name="margin-top">10</property>
+                    </object>
+                </child>
+            </object>
+        </child>
+    </object>
+</interface>
