@@ -1,4 +1,3 @@
-
 use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow, Builder, Switch, Label, CheckButton};
 
