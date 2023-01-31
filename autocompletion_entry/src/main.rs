@@ -25,8 +25,6 @@ fn build_ui(application: &Application) {
     let win_title: Label = builder.object("win_title").expect("Couldn't get label");
     win_title.set_markup("<big>Name a Programming Language you know.</big>");
 
-    // Define text box or Entry
-    let input_field: Entry = builder.object("input_field").expect("Couldn't get Entry");
 
     // Create an EntryCompletion widget
     let completion_countries = EntryCompletion::new();
@@ -40,6 +38,8 @@ fn build_ui(application: &Application) {
     let ls = create_list_model();
     completion_countries.set_model(Some(&ls));
 
+    // Define text box or Entry
+    let input_field: Entry = builder.object("input_field").expect("Couldn't get Entry");
     input_field.set_completion(Some(&completion_countries));
 
     window.show();
