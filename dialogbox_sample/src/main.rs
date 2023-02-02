@@ -4,13 +4,14 @@ use gtk::prelude::*;
 
 use std::rc::Rc;
 
-fn main() -> glib::ExitCode {
+
+fn main()  {
     let application = gtk::Application::builder()
         .application_id("com.github.gtk-rs.examples.dialog")
         .build();
 
     application.connect_activate(build_ui);
-    application.run()
+    application.run();
 }
 
 fn build_ui(application: &gtk::Application) {
@@ -56,12 +57,14 @@ async fn dialog<W: IsA<gtk::Window>>(window: Rc<W>) {
     let answer = question_dialog.run_future().await;
     question_dialog.close();
 
+    let message = &answer.to_string();
+
     let info_dialog = gtk::MessageDialog::builder()
         .transient_for(&*window)
         .modal(true)
         .buttons(gtk::ButtonsType::Close)
         .text("You answered")
-        .secondary_text(format!("Your answer: {answer:?}"))
+        .secondary_text(message)
         .build();
 
     info_dialog.run_future().await;
