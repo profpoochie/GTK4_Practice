@@ -3,8 +3,7 @@ use gtk::prelude::*;
 
 use gtk::gdk::Display;
 use gtk::{
-    Application, ApplicationWindow, Builder, Box as Box_, Button, ComboBoxText, CssProvider, Entry,
-    Orientation, StyleContext, STYLE_PROVIDER_PRIORITY_APPLICATION
+    Application, ApplicationWindow, Builder, Button, ComboBoxText, CssProvider, Entry, StyleContext, STYLE_PROVIDER_PRIORITY_APPLICATION
 };
 
 fn main() {
