@@ -1,0 +1,8 @@
+function_1: btn_function1
+command_1: ls -lh
+
+function_2: btn_function2
+command_2: lsb_release -d
+
+function_3: btn_function3
+command_3: sensors -u
