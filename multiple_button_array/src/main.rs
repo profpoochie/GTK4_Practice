@@ -33,6 +33,8 @@ fn build_ui(application: &gtk::Application) {
         .default_height(300)
         .build();
     let names = inc.buttons;
+
+    // setting buttons based on YAML config file.
     let buttons: Vec<Button> = names
         .into_iter()
         .map(|name| {
