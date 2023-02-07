@@ -1,5 +1,14 @@
 use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow, Box, Button};
+//use core::result::IntoIter;
+use serde::{Deserialize, Serialize};
+use std::fs::File;
+use std::io::Read;
+
+#[derive(Serialize, Deserialize, Debug)]
+struct IngestCom {
+    buttons: Vec<String>,
+}
 
 fn main() {
     let application = Application::new(
@@ -11,17 +20,26 @@ fn main() {
 }
 fn build_ui(application: &gtk::Application) {
 
+    let mut file = File::open("ingest_config.yaml").unwrap();
+    let mut contents = String::new();
+    file.read_to_string(&mut contents).unwrap();
+
+    let inc: IngestCom = serde_yaml::from_str(&contents).unwrap();
+
     let window = ApplicationWindow::builder()
         .application(application)
         .title("Generate Buttons Example")
         .default_width(300)
         .default_height(300)
         .build();
-    let names = vec!["Button 1", "Button 2", "Button 3", "Button 4"];
+    let names = inc.buttons;
     let buttons: Vec<Button> = names
         .into_iter()
         .map(|name| {
-            let button = Button::with_label(name);
+            let button = Button::with_label(&name);
+            button.connect_clicked(move |_| {
+                println!("Button clicked");
+            });
             button
         })
         .collect();
