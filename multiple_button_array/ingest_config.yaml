@@ -1,8 +1,7 @@
 buttons:
-  - button1
-  - button2
-  - button3
-commands:
-  - ls -lh
-  - lsb_release -d
-  - sensors -u
+  - name: button1
+    command: ls -lh
+  - name: button2
+    command: lsb_release -d
+  - name: button2
+    command: sensors -u

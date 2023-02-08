@@ -1,0 +1,5 @@
+buttons:
+  - name: Pull
+    command: ansible-pull xyz
+  - name: Dev UI
+    command: ansible-playbook xyz

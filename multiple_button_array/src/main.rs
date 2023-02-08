@@ -1,15 +1,19 @@
 use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow, Box, Button};
-use serde::{Deserialize, Serialize};
+use serde::Deserialize;
 use std::fs::File;
 use std::io::Read;
 use std::process::Command;
 
-// Struct for YAML config
-#[derive(Serialize, Deserialize, Debug)]
-struct IngestCom {
-    buttons: Vec<String>,
-    commands: Vec<String>,
+#[derive(Deserialize, Debug)]
+struct ButtonList {
+    name: String,
+    command: String,
+}
+
+#[derive(Deserialize, Debug)]
+struct Buttons {
+    buttons: Vec<ButtonList>,
 }
 
 fn main() {
@@ -26,7 +30,7 @@ fn build_ui(application: &gtk::Application) {
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
 
-    let inc: IngestCom = serde_yaml::from_str(&contents).unwrap();
+    let buttons: Buttons = serde_yaml::from_str(&contents).unwrap();
 
     let window = ApplicationWindow::builder()
         .application(application)
@@ -34,8 +38,6 @@ fn build_ui(application: &gtk::Application) {
         .default_width(300)
         .default_height(300)
         .build();
-    let names = inc.buttons;
-    let actions = inc.commands;
 
     let container = Box::builder()
         .halign(gtk::Align::Center)
@@ -46,9 +48,9 @@ fn build_ui(application: &gtk::Application) {
         .build();
 
     // setting buttons based on YAML config file.
-    for (names, actions) in names.iter().zip(actions.iter()){
-        let buttons = Button::with_label(names);
-        let actions = actions.clone();
+    for button in buttons.buttons {
+        let buttons = Button::with_label(&button.name);
+        let actions = button.command.clone();
         buttons.connect_clicked(move |_|{
             term_command(actions.to_string());
         });
@@ -57,8 +59,6 @@ fn build_ui(application: &gtk::Application) {
 
 
     window.set_child(Some(&container));
-    // window.show_all();
-    // application.run(&[]);
     window.show();
 }
 
