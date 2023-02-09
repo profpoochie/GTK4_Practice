@@ -1,9 +1,11 @@
 use gtk::prelude::*;
-use gtk::{Application, ApplicationWindow, Box, Button, Grid};
+use gtk::{Application, ApplicationWindow, Button, Grid};
 use serde::Deserialize;
 use std::fs::File;
 use std::io::Read;
 use std::process::Command;
+
+const ROW_LIMIT: i32 = 20;
 
 #[derive(Deserialize, Debug)]
 struct ButtonList {
@@ -40,26 +42,26 @@ fn build_ui(application: &gtk::Application) {
         .build();
 
     let container = Grid::builder()
-        .margin_start(6)
-        .margin_end(6)
-        .margin_top(6)
-        .margin_bottom(6)
+        .margin_start(12)
+        .margin_end(12)
+        .margin_top(12)
+        .margin_bottom(12)
         .halign(gtk::Align::Center)
         .valign(gtk::Align::Center)
-        .row_spacing(6)
-        .column_spacing(6)
+        .row_spacing(12)
+        .column_spacing(12)
         .build();
+    
     let mut counter=0;
-    let mut column=0;
-    let mut row=0;
+    let mut column;
+    let mut row;
     window.set_child(Some(&container));
     // setting buttons based on YAML config file.
     for button in buttons.buttons {
 
-        row = counter / 6;
-        column = counter % 6;
+        column = counter / ROW_LIMIT;
+        row = counter % ROW_LIMIT;
 
-        println!("counter:{}, column:{}, row:{}", counter,column,row);
         let buttons = Button::with_label(&button.name);
         let actions = button.command.clone();
         buttons.connect_clicked(move |_|{
