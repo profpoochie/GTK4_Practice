@@ -1,5 +1,5 @@
 use gtk::prelude::*;
-use gtk::{Application, ApplicationWindow, Box, Button};
+use gtk::{Application, ApplicationWindow, Box, Button, Grid};
 use serde::Deserialize;
 use std::fs::File;
 use std::io::Read;
@@ -39,26 +39,38 @@ fn build_ui(application: &gtk::Application) {
         .default_height(300)
         .build();
 
-    let container = Box::builder()
+    let container = Grid::builder()
+        .margin_start(6)
+        .margin_end(6)
+        .margin_top(6)
+        .margin_bottom(6)
         .halign(gtk::Align::Center)
-        .orientation(gtk::Orientation::Vertical)
-        .margin_top(24)
-        .margin_bottom(24)
-        .spacing(24)
+        .valign(gtk::Align::Center)
+        .row_spacing(6)
+        .column_spacing(6)
         .build();
-
+    let mut counter=0;
+    let mut column=0;
+    let mut row=0;
+    window.set_child(Some(&container));
     // setting buttons based on YAML config file.
     for button in buttons.buttons {
+
+        row = counter / 6;
+        column = counter % 6;
+
+        println!("counter:{}, column:{}, row:{}", counter,column,row);
         let buttons = Button::with_label(&button.name);
         let actions = button.command.clone();
         buttons.connect_clicked(move |_|{
             term_command(actions.to_string());
         });
-        container.append(&buttons);
+        container.attach(&buttons,column,row,1,1);
+        counter = counter+1;
     }
 
 
-    window.set_child(Some(&container));
+
     window.show();
 }
 

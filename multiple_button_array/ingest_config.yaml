@@ -5,3 +5,34 @@ buttons:
     command: lsb_release -d
   - name: button2
     command: sensors -u
+  - name: button1
+    command: ls -lh
+  - name: button2
+    command: lsb_release -d
+  - name: button2
+    command: sensors -u
+  - name: button1
+    command: ls -lh
+  - name: button2
+    command: lsb_release -d
+  - name: button2
+    command: sensors -u
+  - name: button1
+    command: ls -lh
+  - name: button2
+    command: lsb_release -d
+  - name: button2
+    command: sensors -u
+  - name: button1
+    command: ls -lh
+  - name: button2
+    command: lsb_release -d
+  - name: button2
+    command: sensors -u
+  - name: button1
+    command: ls -lh
+  - name: button2
+    command: lsb_release -d
+  - name: button2
+    command: sensors -u
+
