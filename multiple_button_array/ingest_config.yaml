@@ -19,385 +19,304 @@ buttons:
     command: sensors -u
   - name: button10
     command: ls -lh
-  - name: button1
+  - name: button11
     command: ls -lh
-  - name: button2
+  - name: button12
     command: lsb_release -d
-  - name: button3
+  - name: button13
     command: sensors -u
-  - name: button4
+  - name: button14
     command: ls -lh
-  - name: button5
+  - name: button15
     command: lsb_release -d
-  - name: button6
+  - name: button16
     command: sensors -u
-  - name: button7
+  - name: button17
     command: ls -lh
-  - name: button8
+  - name: button18
     command: lsb_release -d
-  - name: button9
+  - name: button19
     command: sensors -u
-  - name: button10
+  - name: button20
     command: ls -lh
-  - name: button1
+  - name: button21
     command: ls -lh
-  - name: button2
+  - name: button22
     command: lsb_release -d
-  - name: button3
+  - name: button23
     command: sensors -u
-  - name: button4
+  - name: button24
     command: ls -lh
-  - name: button5
+  - name: button25
     command: lsb_release -d
-  - name: button6
+  - name: button26
     command: sensors -u
-  - name: button7
+  - name: button27
     command: ls -lh
-  - name: button8
+  - name: button28
     command: lsb_release -d
-  - name: button9
+  - name: button29
     command: sensors -u
-  - name: button10
+  - name: button30
     command: ls -lh
-  - name: button1
+  - name: button31
     command: ls -lh
-  - name: button2
+  - name: button32
     command: lsb_release -d
-  - name: button3
+  - name: button33
     command: sensors -u
-  - name: button4
+  - name: button34
     command: ls -lh
-  - name: button5
+  - name: button35
     command: lsb_release -d
-  - name: button6
+  - name: button36
     command: sensors -u
-  - name: button7
+  - name: button37
     command: ls -lh
-  - name: button8
+  - name: button38
     command: lsb_release -d
-  - name: button9
+  - name: button39
     command: sensors -u
-  - name: button10
+  - name: button40
     command: ls -lh
-  - name: button1
+  - name: button41
     command: ls -lh
-  - name: button2
+  - name: button42
     command: lsb_release -d
-  - name: button3
+  - name: button43
     command: sensors -u
-  - name: button4
+  - name: button44
     command: ls -lh
-  - name: button5
+  - name: button45
     command: lsb_release -d
-  - name: button6
+  - name: button46
     command: sensors -u
-  - name: button7
+  - name: button47
     command: ls -lh
-  - name: button8
+  - name: button48
     command: lsb_release -d
-  - name: button9
+  - name: button49
     command: sensors -u
-  - name: button10
+  - name: button50
     command: ls -lh
-  - name: button1
+  - name: button51
     command: ls -lh
-  - name: button2
+  - name: button52
     command: lsb_release -d
-  - name: button3
+  - name: button53
     command: sensors -u
-  - name: button4
+  - name: button54
     command: ls -lh
-  - name: button5
+  - name: button55
     command: lsb_release -d
-  - name: button6
+  - name: button56
     command: sensors -u
-  - name: button7
+  - name: button57
     command: ls -lh
-  - name: button8
+  - name: button58
     command: lsb_release -d
-  - name: button9
+  - name: button59
     command: sensors -u
-  - name: button10
+  - name: button60
     command: ls -lh
-  - name: button1
+  - name: button61
     command: ls -lh
-  - name: button2
+  - name: button62
     command: lsb_release -d
-  - name: button3
+  - name: button63
     command: sensors -u
-  - name: button4
+  - name: button64
     command: ls -lh
-  - name: button5
+  - name: button65
     command: lsb_release -d
-  - name: button6
+  - name: button66
     command: sensors -u
-  - name: button7
+  - name: button67
     command: ls -lh
-  - name: button8
+  - name: button68
     command: lsb_release -d
-  - name: button9
+  - name: button69
     command: sensors -u
-  - name: button10
+  - name: button70
     command: ls -lh
-  - name: button1
+  - name: button71
     command: ls -lh
-  - name: button2
+  - name: button72
     command: lsb_release -d
-  - name: button3
+  - name: button73
     command: sensors -u
-  - name: button4
+  - name: button74
     command: ls -lh
-  - name: button5
+  - name: button75
     command: lsb_release -d
-  - name: button6
+  - name: button76
     command: sensors -u
-  - name: button7
+  - name: button77
     command: ls -lh
-  - name: button8
+  - name: button78
     command: lsb_release -d
-  - name: button9
+  - name: button79
     command: sensors -u
-  - name: button10
+  - name: button80
     command: ls -lh
-  - name: button1
+  - name: button81
     command: ls -lh
-  - name: button2
+  - name: button82
     command: lsb_release -d
-  - name: button3
+  - name: button83
     command: sensors -u
-  - name: button4
+  - name: button84
     command: ls -lh
-  - name: button5
+  - name: button85
     command: lsb_release -d
-  - name: button6
+  - name: button86
     command: sensors -u
-  - name: button7
+  - name: button87
     command: ls -lh
-  - name: button8
+  - name: button88
     command: lsb_release -d
-  - name: button9
+  - name: button89
     command: sensors -u
-  - name: button10
+  - name: button90
     command: ls -lh
-  - name: button1
+  - name: button91
     command: ls -lh
-  - name: button2
+  - name: button92
     command: lsb_release -d
-  - name: button3
+  - name: button93
     command: sensors -u
-  - name: button4
+  - name: button94
     command: ls -lh
-  - name: button5
+  - name: button95
     command: lsb_release -d
-  - name: button6
+  - name: button96
     command: sensors -u
-  - name: button7
+  - name: button97
     command: ls -lh
-  - name: button8
+  - name: button98
     command: lsb_release -d
-  - name: button9
+  - name: button99
     command: sensors -u
-  - name: button10
+  - name: button100
     command: ls -lh
-  - name: button1
+  - name: button101
     command: ls -lh
-  - name: button2
+  - name: button102
     command: lsb_release -d
-  - name: button3
+  - name: button103
     command: sensors -u
-  - name: button4
+  - name: button104
     command: ls -lh
-  - name: button5
+  - name: button105
     command: lsb_release -d
-  - name: button6
+  - name: button106
     command: sensors -u
-  - name: button7
+  - name: button107
     command: ls -lh
-  - name: button8
+  - name: button108
     command: lsb_release -d
-  - name: button9
+  - name: button109
     command: sensors -u
-  - name: button10
+  - name: button110
     command: ls -lh
-  - name: button1
+  - name: button111
     command: ls -lh
-  - name: button2
+  - name: button112
     command: lsb_release -d
-  - name: button3
+  - name: button113
     command: sensors -u
-  - name: button4
+  - name: button114
     command: ls -lh
-  - name: button5
+  - name: button115
     command: lsb_release -d
-  - name: button6
+  - name: button116
     command: sensors -u
-  - name: button7
+  - name: button117
     command: ls -lh
-  - name: button8
+  - name: button18
     command: lsb_release -d
-  - name: button9
+  - name: button119
     command: sensors -u
-  - name: button10
+  - name: button120
     command: ls -lh
-  - name: button1
+  - name: button121
     command: ls -lh
-  - name: button2
+  - name: button122
     command: lsb_release -d
-  - name: button3
+  - name: button123
     command: sensors -u
-  - name: button4
+  - name: button124
     command: ls -lh
-  - name: button5
+  - name: button125
     command: lsb_release -d
-  - name: button6
+  - name: button126
     command: sensors -u
-  - name: button7
+  - name: button127
     command: ls -lh
-  - name: button8
+  - name: button128
     command: lsb_release -d
-  - name: button9
+  - name: button129
     command: sensors -u
-  - name: button10
+  - name: button130
     command: ls -lh
-  - name: button1
+  - name: button131
     command: ls -lh
-  - name: button2
+  - name: button132
     command: lsb_release -d
-  - name: button3
+  - name: button133
     command: sensors -u
-  - name: button4
+  - name: button134
     command: ls -lh
-  - name: button5
+  - name: button135
     command: lsb_release -d
-  - name: button6
+  - name: button136
     command: sensors -u
-  - name: button7
+  - name: button137
     command: ls -lh
-  - name: button8
+  - name: button138
     command: lsb_release -d
-  - name: button9
+  - name: button139
     command: sensors -u
-  - name: button10
+  - name: button140
     command: ls -lh
-  - name: button1
+  - name: button141
     command: ls -lh
-  - name: button2
+  - name: button142
     command: lsb_release -d
-  - name: button3
+  - name: button143
     command: sensors -u
-  - name: button4
+  - name: button144
     command: ls -lh
-  - name: button5
+  - name: button145
     command: lsb_release -d
-  - name: button6
+  - name: button146
     command: sensors -u
-  - name: button7
+  - name: button147
     command: ls -lh
-  - name: button8
+  - name: button148
     command: lsb_release -d
-  - name: button9
+  - name: button149
     command: sensors -u
-  - name: button10
+  - name: button150
+    command: sensors -u
+  - name: button151
     command: ls -lh
-  - name: button1
-    command: ls -lh
-  - name: button2
+  - name: button152
     command: lsb_release -d
-  - name: button3
+  - name: button153
     command: sensors -u
-  - name: button4
+  - name: button154
     command: ls -lh
-  - name: button5
+  - name: button155
     command: lsb_release -d
-  - name: button6
+  - name: button156
     command: sensors -u
-  - name: button7
+  - name: button157
     command: ls -lh
-  - name: button8
+  - name: button158
     command: lsb_release -d
-  - name: button9
+  - name: button159
     command: sensors -u
-  - name: button10
-    command: ls -lh
-  - name: button1
-    command: ls -lh
-  - name: button2
-    command: lsb_release -d
-  - name: button3
+  - name: button160
     command: sensors -u
-  - name: button4
-    command: ls -lh
-  - name: button5
-    command: lsb_release -d
-  - name: button6
-    command: sensors -u
-  - name: button7
-    command: ls -lh
-  - name: button8
-    command: lsb_release -d
-  - name: button9
-    command: sensors -u
-  - name: button10
-    command: ls -lh
-  - name: button1
-    command: ls -lh
-  - name: button2
-    command: lsb_release -d
-  - name: button3
-    command: sensors -u
-  - name: button4
-    command: ls -lh
-  - name: button5
-    command: lsb_release -d
-  - name: button6
-    command: sensors -u
-  - name: button7
-    command: ls -lh
-  - name: button8
-    command: lsb_release -d
-  - name: button9
-    command: sensors -u
-  - name: button10
-    command: ls -lh
-  - name: button1
-    command: ls -lh
-  - name: button2
-    command: lsb_release -d
-  - name: button3
-    command: sensors -u
-  - name: button4
-    command: ls -lh
-  - name: button5
-    command: lsb_release -d
-  - name: button6
-    command: sensors -u
-  - name: button7
-    command: ls -lh
-  - name: button8
-    command: lsb_release -d
-  - name: button9
-    command: sensors -u
-  - name: button10
-    command: ls -lh
-  - name: button1
-    command: ls -lh
-  - name: button2
-    command: lsb_release -d
-  - name: button3
-    command: sensors -u
-  - name: button4
-    command: ls -lh
-  - name: button5
-    command: lsb_release -d
-  - name: button6
-    command: sensors -u
-  - name: button7
-    command: ls -lh
-  - name: button8
-    command: lsb_release -d
-  - name: button9
-    command: sensors -u
-  - name: button10
-    command: ls -lh
-
 

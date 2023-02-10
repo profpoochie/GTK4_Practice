@@ -51,7 +51,7 @@ fn build_ui(application: &gtk::Application) {
         .row_spacing(12)
         .column_spacing(12)
         .build();
-    
+
     let mut counter=0;
     let mut column;
     let mut row;
