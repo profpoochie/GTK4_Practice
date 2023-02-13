@@ -78,15 +78,19 @@ fn build_ui(application: &gtk::Application) {
 
 // Terminal command
 fn term_command(input_string:String) {
-    let input_vec: Vec<&str> = input_string.split(" ").collect();
+    let input_vec: Vec<&str> = input_string
+        .trim()
+        .split(" ")
+        .collect();
     let command = input_vec[0];
     let args = &input_vec[1..];
-    let output = Command::new(command)
-        .args(args)
-        .output()
-        .expect("Failed to run command");
+    Command::new("gnome-terminal")
+        .arg("-e")
+        .arg(format!("sh -c '{} {:?}; read -p \"Press any key to continue...\"'", command, args.join(" ")).as_str())
+        .spawn()
+        .expect("Failed to open new terminal");
 
-    let stdout = String::from_utf8_lossy(&output.stdout);
-    println!("{}", stdout);
+    /*let stdout = String::from_utf8_lossy(&output.stdout);
+    println!("{}", stdout);*/
 }
 
