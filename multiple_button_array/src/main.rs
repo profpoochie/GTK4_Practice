@@ -90,7 +90,5 @@ fn term_command(input_string:String) {
         .spawn()
         .expect("Failed to open new terminal");
 
-    /*let stdout = String::from_utf8_lossy(&output.stdout);
-    println!("{}", stdout);*/
 }
 
