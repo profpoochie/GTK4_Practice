@@ -28,7 +28,14 @@ fn main() {
                 .default_height(200)
                 .build();
 
-            let latest_version_button = Button::with_label("Latest Version");
+            let latest_version_button = Button::builder()
+                .label("Latest Version")
+                .margin_top(50)
+                .margin_bottom(50)
+                .margin_start(50)
+                .margin_end(50)
+                .build();
+
             new_window.set_child(Some(&latest_version_button));
             new_window.show();
             latest_version_button.connect_clicked(move |_| {
