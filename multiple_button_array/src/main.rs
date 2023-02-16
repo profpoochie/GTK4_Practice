@@ -3,7 +3,7 @@ use gtk::{Application, ApplicationWindow, Button, Grid};
 use serde::Deserialize;
 use std::fs::File;
 use std::io::Read;
-use std::process::Command;
+use std::process::{Command, Stdio};
 
 const ROW_LIMIT: i32 = 20;
 
@@ -70,16 +70,18 @@ fn build_ui(application: &gtk::Application) {
 }
 
 // Terminal command
-fn execute_command(input_string: String) {
-    let mut input_vec: Vec<&str> = input_string.trim().split(" ").collect();
-    let command = input_vec.remove(0);
-    let args = &input_vec;
+fn execute_command(command: String) {
+    let cmd = format!("gnome-terminal -e 'bash -c \"{}; exec $SHELL\"'", command.replace("\"", "\\\""));
 
-    let mut cmd = Command::new("gnome-terminal");
-    cmd.arg("-e")
-        .arg(format!("sh -c '{} {}; exec $SHELL'", command, args.join(" ")));
-
-    let status = cmd.status().expect("Failed to execute command");
+    let status = Command::new("bash")
+        .arg("-c")
+        .arg(&cmd)
+        .stdout(Stdio::null())
+        .stderr(Stdio::null())
+        .spawn()
+        .expect("Failed to spawn new terminal window to execute command")
+        .wait()
+        .expect("Failed to wait for command to complete");
 
     if status.success() {
         println!("Command executed successfully");
