@@ -70,17 +70,21 @@ fn build_ui(application: &gtk::Application) {
 }
 
 // Terminal command
-fn execute_command(input_string:String) {
-    let input_vec: Vec<&str> = input_string
-        .trim()
-        .split(" ")
-        .collect();
-    let command = input_vec[0];
-    let args = &input_vec[1..];
-    Command::new("gnome-terminal")
-        .arg("-e")
-        .arg(format!("sh -c '{} {:?}; read -p \"Press any key to continue...\"'", command, args.join(" ")).as_str())
-        .spawn()
-        .expect("Failed to open new terminal");
+fn execute_command(input_string: String) {
+    let mut input_vec: Vec<&str> = input_string.trim().split(" ").collect();
+    let command = input_vec.remove(0);
+    let args = &input_vec;
+
+    let mut cmd = Command::new("gnome-terminal");
+    cmd.arg("-e")
+        .arg(format!("sh -c '{} {}; exec $SHELL'", command, args.join(" ")));
+
+    let status = cmd.status().expect("Failed to execute command");
+
+    if status.success() {
+        println!("Command executed successfully");
+    } else {
+        println!("Command failed with exit code {:?}", status.code());
+    }
 }
 
