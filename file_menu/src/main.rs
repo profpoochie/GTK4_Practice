@@ -45,23 +45,11 @@ fn add_actions(
     window: &gtk::ApplicationWindow,
 ) {
     // Thanks to this method, we can say that this item is actually a checkbox.
-    let switch_action = gio::SimpleAction::new_stateful("switch", None, &false.to_variant());
-    switch_action.connect_activate(clone!(@weak switch => move |g, _| {
-        let mut is_active = false;
-        if let Some(g) = g.get_state() {
-            is_active = g.get().expect("couldn't get bool");
-            // We update the state of the toggle.
-            switch.set_active(!is_active);
-        }
-        // We need to change the toggle state ourselves. `gio` dark magic.
-        g.change_state(&(!is_active).to_variant());
-    }));
+
 
     // The same goes the around way: if we update the switch state, we need to update the menu
     // item's state.
-    switch.connect_property_active_notify(clone!(@weak switch_action => move |s| {
-        switch_action.change_state(&s.get_active().to_variant());
-    }));
+
 
     let sub_another = gio::SimpleAction::new("sub_another", None);
     sub_another.connect_activate(clone!(@weak label => move |_, _| {
@@ -98,7 +86,7 @@ fn add_actions(
     application.add_action(&sub_another);
     application.add_action(&sub_sub_another);
     application.add_action(&sub_sub_another2);
-    application.add_action(&switch_action);
+
 }
 
 fn add_accelerators(application: &gtk::Application) {
@@ -137,7 +125,7 @@ fn main() {
         Some("com.github.gtk-rs.examples.menu_bar_system"),
         Default::default(),
     )
-        .expect("Initialization failed...");
+        ;
 
     application.connect_startup(|app| {
         add_accelerators(app);
@@ -146,5 +134,5 @@ fn main() {
         build_ui(app);
     });
 
-    application.run(&args().collect::<Vec<_>>());
+    application.run();
 }
