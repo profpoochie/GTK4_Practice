@@ -4,6 +4,7 @@ use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow, Builder, Button, Entry};
 use gtk:: glib;
 use std::process::Command;
+use std::process::Stdio;
 
 fn main() {
     let application = gtk::Application::new(
@@ -38,15 +39,22 @@ fn build_ui(application: &Application) {
 }
 
 // Terminal command
-fn term_command(input_string:String) {
-    let input_vec: Vec<&str> = input_string.split(" ").collect();
-    let command = input_vec[0];
-    let args = &input_vec[1..];
-    let output = Command::new(command)
-        .args(args)
-        .output()
-        .expect("Failed to run command");
+fn term_command(command:String) {
+    let cmd = format!("gnome-terminal -e 'bash -c \"{}; exec $SHELL\"'", command.replace("\"", "\\\""));
 
-    let stdout = String::from_utf8_lossy(&output.stdout);
-    println!("{}", stdout);
+    let status = Command::new("bash")
+        .arg("-c")
+        .arg(&cmd)
+        .stdout(Stdio::null())
+        .stderr(Stdio::null())
+        .spawn()
+        .expect("Failed to spawn new terminal window to execute command")
+        .wait()
+        .expect("Failed to wait for command to complete");
+
+    if status.success() {
+        println!("Command executed successfully");
+    } else {
+        println!("Command failed with exit code {:?}", status.code());
+    }
 }
